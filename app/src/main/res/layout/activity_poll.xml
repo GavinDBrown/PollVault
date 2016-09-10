@@ -6,7 +6,7 @@
   <data>
     <variable
       name="poll"
-      type="com.gavindev.pollvault.ModelUppercase.Poll" />
+      type="com.gavindev.pollvault.model.Poll" />
   </data>
 
   <LinearLayout

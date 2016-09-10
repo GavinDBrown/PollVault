@@ -1,4 +1,4 @@
-package com.gavindev.pollvault.ModelUppercase
+package com.gavindev.pollvault.model
 
 /**
  * Created by gbrown on 9/10/16.

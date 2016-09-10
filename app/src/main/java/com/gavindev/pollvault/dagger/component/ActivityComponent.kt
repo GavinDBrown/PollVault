@@ -2,7 +2,7 @@ package com.gavindev.pollvault.dagger.component
 
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
-import com.gavindev.pollvault.createpoll.LaunchActivity
+import com.gavindev.pollvault.createpoll.CreatePollActivity
 import com.gavindev.pollvault.viewpoll.PollActivity
 import com.gavindev.pollvault.dagger.PerActivity
 import com.gavindev.pollvault.dagger.base.InjectorComponentGetter
@@ -30,6 +30,6 @@ abstract class ActivityComponent {
 
     }
 
-    abstract fun inject(activity: LaunchActivity)
+    abstract fun inject(activity: CreatePollActivity)
     abstract fun inject(activity: PollActivity)
 }

@@ -7,17 +7,17 @@ import android.view.View
 import com.gavindev.pollvault.R
 import com.gavindev.pollvault.dagger.base.InjectingFragmentActivity
 import com.gavindev.pollvault.dagger.component.ActivityComponent
-import com.gavindev.pollvault.databinding.ActivityLaunchBinding
+import com.gavindev.pollvault.databinding.ActivityCreatePollBinding
 import com.gavindev.pollvault.networking.PollApi
 import com.gavindev.pollvault.viewpoll.PollActivity
 import javax.inject.Inject
 
-class LaunchActivity : InjectingFragmentActivity() {
+class CreatePollActivity : InjectingFragmentActivity() {
 
     @Inject
     lateinit var pollApi: PollApi
 
-    lateinit var viewBinding: ActivityLaunchBinding
+    lateinit var viewBinding: ActivityCreatePollBinding
 
 
     override fun injectComponent(component: ActivityComponent) {
@@ -26,7 +26,7 @@ class LaunchActivity : InjectingFragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewBinding = DataBindingUtil.setContentView(this, R.layout.activity_launch)
+        viewBinding = DataBindingUtil.setContentView(this, R.layout.activity_create_poll)
 
     }
 

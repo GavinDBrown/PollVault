@@ -8,7 +8,7 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
 
-    <activity android:name=".createpoll.LaunchActivity">
+    <activity android:name=".createpoll.CreatePollActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 

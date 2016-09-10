@@ -7,7 +7,7 @@ import com.gavindev.pollvault.dagger.module.ApiModule
 import com.gavindev.pollvault.dagger.module.AppModule
 import com.gavindev.pollvault.dagger.module.GsonModule
 import com.gavindev.pollvault.dagger.module.RetrofitModule
-import com.gavindev.pollvault.networking.ApiService
+import com.gavindev.pollvault.networking.PollApi
 
 import dagger.Component
 
@@ -26,6 +26,6 @@ abstract class AppComponent {
         }
     }
 
-    abstract fun apiService(): ApiService
+    abstract fun apiService(): PollApi
 
 }

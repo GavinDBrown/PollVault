@@ -1,7 +1,7 @@
 package com.gavindev.pollvault.dagger.module
 
 import com.gavindev.pollvault.dagger.PerApp
-import com.gavindev.pollvault.networking.ApiService
+import com.gavindev.pollvault.networking.PollApi
 
 import dagger.Module
 import dagger.Provides
@@ -12,8 +12,8 @@ class ApiModule {
 
     @Provides
     @PerApp
-    internal fun provideApiService(retrofit: Retrofit): ApiService {
-        return retrofit.create(ApiService::class.java)
+    internal fun providePollApi(retrofit: Retrofit): PollApi {
+        return retrofit.create(PollApi::class.java)
     }
 
 }

@@ -1,6 +1,6 @@
 package com.gavindev.pollvault.dagger.module
 
-import com.gavindev.pollvault.BuildConfig
+import android.support.v7.appcompat.BuildConfig
 import com.gavindev.pollvault.dagger.PerApp
 import dagger.Module
 import dagger.Provides
@@ -17,7 +17,7 @@ class RetrofitModule {
     @PerApp
     internal fun provideRetrofit(okHttpClient: OkHttpClient,
                                  gsonConverterFactory: GsonConverterFactory): Retrofit {
-        return Retrofit.Builder().baseUrl("api.github.com").client(okHttpClient).addConverterFactory(gsonConverterFactory).addCallAdapterFactory(RxJavaCallAdapterFactory.create()).build()
+        return Retrofit.Builder().baseUrl("https://api.github.com").client(okHttpClient).addConverterFactory(gsonConverterFactory).addCallAdapterFactory(RxJavaCallAdapterFactory.create()).build()
     }
 
     @Provides

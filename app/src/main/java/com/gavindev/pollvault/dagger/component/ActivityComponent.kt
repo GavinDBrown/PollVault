@@ -2,8 +2,8 @@ package com.gavindev.pollvault.dagger.component
 
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
-import com.gavindev.pollvault.LaunchActivity
-import com.gavindev.pollvault.PollActivity
+import com.gavindev.pollvault.createpoll.LaunchActivity
+import com.gavindev.pollvault.viewpoll.PollActivity
 import com.gavindev.pollvault.dagger.PerActivity
 import com.gavindev.pollvault.dagger.base.InjectorComponentGetter
 import com.gavindev.pollvault.dagger.module.ActivityModule

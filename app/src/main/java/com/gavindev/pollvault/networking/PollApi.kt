@@ -1,9 +1,9 @@
 package com.gavindev.pollvault.networking
 
-import com.gavindev.pollvault.Model.CreateResult
-import com.gavindev.pollvault.Model.Poll
-import com.gavindev.pollvault.Model.PollResponse
-import com.gavindev.pollvault.Model.ViewResult
+import com.gavindev.pollvault.ModelUppercase.CreateResult
+import com.gavindev.pollvault.ModelUppercase.Poll
+import com.gavindev.pollvault.ModelUppercase.PollResponse
+import com.gavindev.pollvault.ModelUppercase.ViewResult
 import okhttp3.Response
 import retrofit2.http.GET
 import retrofit2.http.POST

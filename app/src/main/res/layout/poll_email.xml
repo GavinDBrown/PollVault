@@ -18,7 +18,7 @@
 
     <android.support.design.widget.TextInputEditText
       android:hint="Option"
-      android:inputType="textCapSentences|textAutoCorrect|textAutoComplete"
+      android:inputType="textEmailAddress"
       android:singleLine="true"
       android:text="@={emailList[index]}"
       android:layout_width="match_parent"

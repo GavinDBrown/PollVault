@@ -4,7 +4,6 @@ import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.view.ViewPager
-import android.view.View
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.gavindev.pollvault.R
@@ -18,7 +17,7 @@ import com.gavindev.pollvault.viewpoll.PollActivity
 import me.relex.circleindicator.CircleIndicator
 import javax.inject.Inject
 
-class CreatePollActivity : PollProvider, PollSharingEmailsProvider, InjectingFragmentActivity(){
+class CreatePollActivity : PollProvider, PollSharingEmailsProvider, PollCreatedListener, InjectingFragmentActivity(){
 
     @Inject
     lateinit var pollApi: PollApi
@@ -57,8 +56,9 @@ class CreatePollActivity : PollProvider, PollSharingEmailsProvider, InjectingFra
         return pollSharingEmails
     }
 
-    fun pollCreated(view: View) {
+    override fun onPollCreated() {
         startActivity(Intent(this, PollActivity::class.java))
+        finish()
     }
 
     override fun onBackPressed() {

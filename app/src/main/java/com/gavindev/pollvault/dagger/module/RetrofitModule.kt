@@ -17,7 +17,12 @@ class RetrofitModule {
     @PerApp
     internal fun provideRetrofit(okHttpClient: OkHttpClient,
                                  gsonConverterFactory: GsonConverterFactory): Retrofit {
-        return Retrofit.Builder().baseUrl("https://api.github.com").client(okHttpClient).addConverterFactory(gsonConverterFactory).addCallAdapterFactory(RxJavaCallAdapterFactory.create()).build()
+        return Retrofit.Builder()
+                .baseUrl("http://52.26.163.55:3000")
+                .client(okHttpClient)
+                .addConverterFactory(gsonConverterFactory)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build()
     }
 
     @Provides

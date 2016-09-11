@@ -13,7 +13,7 @@ open class CreatePollFragment: Fragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        val pollProvider = context as PollProvider
-        poll = pollProvider.poll()
+        context as PollProvider
+        poll = context.getPoll()
     }
 }

@@ -1,4 +1,4 @@
-package com.gavindev.pollvault.createpoll
+package com.gavindev.pollvault.createpoll.polloptions
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView

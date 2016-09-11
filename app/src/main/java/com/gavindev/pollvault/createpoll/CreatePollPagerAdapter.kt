@@ -3,6 +3,8 @@ package com.gavindev.pollvault.createpoll
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.gavindev.pollvault.createpoll.polloptions.CreatePollOptionsFragment
+import com.gavindev.pollvault.createpoll.sharepoll.CreatePollShareFragment
 
 /**
  * Created by gbrown on 9/10/16.

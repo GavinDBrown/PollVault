@@ -1,4 +1,4 @@
-package com.gavindev.pollvault.createpoll
+package com.gavindev.pollvault.createpoll.polloptions
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -11,6 +11,8 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.gavindev.pollvault.R
+import com.gavindev.pollvault.createpoll.CreatePollFragment
+import com.gavindev.pollvault.createpoll.polloptions.PollOptionsAdapter
 import com.gavindev.pollvault.databinding.CreatePollOptionsBinding
 
 /**

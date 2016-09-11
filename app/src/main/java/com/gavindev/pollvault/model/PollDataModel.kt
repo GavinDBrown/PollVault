@@ -1,12 +1,10 @@
 package com.gavindev.pollvault.model
 
-import java.util.*
-
 /**
  * Created by gbrown on 9/10/16.
  */
 
-data class Poll(var question: String = "", var pollOptions: MutableList<String> = ArrayList<String>(), val period: VotingPeriod? = null)
+data class Poll(var question: String = "", var pollOptions: MutableList<String> = arrayListOf("", "", ""), val period: VotingPeriod? = null)
 
 data class PollResponse(var option: String, var value: Float)
 

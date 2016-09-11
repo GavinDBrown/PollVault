@@ -8,6 +8,7 @@ import android.view.View
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.gavindev.pollvault.R
+import com.gavindev.pollvault.createpoll.sharepoll.PollSharingEmailsProvider
 import com.gavindev.pollvault.dagger.base.InjectingFragmentActivity
 import com.gavindev.pollvault.dagger.component.ActivityComponent
 import com.gavindev.pollvault.databinding.ActivityCreatePollBinding
@@ -17,7 +18,7 @@ import com.gavindev.pollvault.viewpoll.PollActivity
 import me.relex.circleindicator.CircleIndicator
 import javax.inject.Inject
 
-class CreatePollActivity : PollProvider, InjectingFragmentActivity(){
+class CreatePollActivity : PollProvider, PollSharingEmailsProvider, InjectingFragmentActivity(){
 
     @Inject
     lateinit var pollApi: PollApi
@@ -31,6 +32,7 @@ class CreatePollActivity : PollProvider, InjectingFragmentActivity(){
     private lateinit var createPollPagerAdapter: CreatePollPagerAdapter
 
     private val poll = Poll()
+    private val pollSharingEmails: MutableList<String> = arrayListOf("", "")
 
     override fun injectComponent(component: ActivityComponent) {
         component.inject(this)
@@ -47,8 +49,12 @@ class CreatePollActivity : PollProvider, InjectingFragmentActivity(){
         circleIndicator.setViewPager(createPollViewPager)
     }
 
-    override fun poll(): Poll {
+    override fun getPoll(): Poll {
         return poll
+    }
+
+    override fun getPollSharingEmails(): MutableList<String> {
+        return pollSharingEmails
     }
 
     fun pollCreated(view: View) {

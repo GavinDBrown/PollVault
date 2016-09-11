@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+    <import type="java.util.List"/>
+    <variable
+      name="emailList"
+      type="List&lt;String&gt;"/>
+    <variable
+      name="index"
+      type="Integer" />
+  </data>
+
+  <android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+      android:hint="Option"
+      android:inputType="textCapSentences|textAutoCorrect|textAutoComplete"
+      android:singleLine="true"
+      android:text="@={emailList[index]}"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+</layout>

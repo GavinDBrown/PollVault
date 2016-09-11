@@ -12,10 +12,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-      android:text="@{poll.question}"
+    <TextView
+      android:text="Create a poll"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"/>
+
+    <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <EditText
+        android:hint="Title"
+        android:inputType="textCapWords|textAutoCorrect|textAutoComplete"
+        android:singleLine="true"
+        android:text="@={poll.question}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TextInputLayout>
 
 
 

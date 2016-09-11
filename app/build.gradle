@@ -73,6 +73,8 @@ dependencies {
 
   //view pager indicator
   compile 'me.relex:circleindicator:1.2.1'
+
+  compile 'com.android.support:design:24.2.0'
 }
 repositories {
   jcenter()

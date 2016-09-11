@@ -11,12 +11,13 @@ import com.gavindev.pollvault.R
 import com.gavindev.pollvault.dagger.base.InjectingFragmentActivity
 import com.gavindev.pollvault.dagger.component.ActivityComponent
 import com.gavindev.pollvault.databinding.ActivityCreatePollBinding
+import com.gavindev.pollvault.model.Poll
 import com.gavindev.pollvault.networking.PollApi
 import com.gavindev.pollvault.viewpoll.PollActivity
 import me.relex.circleindicator.CircleIndicator
 import javax.inject.Inject
 
-class CreatePollActivity : InjectingFragmentActivity() {
+class CreatePollActivity : PollProvider, InjectingFragmentActivity(){
 
     @Inject
     lateinit var pollApi: PollApi
@@ -29,6 +30,8 @@ class CreatePollActivity : InjectingFragmentActivity() {
     private lateinit var viewBinding: ActivityCreatePollBinding
     private lateinit var createPollPagerAdapter: CreatePollPagerAdapter
 
+    private val poll = Poll()
+
     override fun injectComponent(component: ActivityComponent) {
         component.inject(this)
     }
@@ -36,10 +39,16 @@ class CreatePollActivity : InjectingFragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = DataBindingUtil.setContentView(this, R.layout.activity_create_poll)
+        @Suppress("MISSING_DEPENDENCY_CLASS") // https://youtrack.jetbrains.com/issue/KT-12402
+        viewBinding.poll = poll
         ButterKnife.bind(this)
         createPollPagerAdapter = CreatePollPagerAdapter(supportFragmentManager)
         createPollViewPager.adapter = createPollPagerAdapter
         circleIndicator.setViewPager(createPollViewPager)
+    }
+
+    override fun poll(): Poll {
+        return poll
     }
 
     fun pollCreated(view: View) {
